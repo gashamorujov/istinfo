@@ -23,14 +23,6 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* ---------- Scroll cue click ---------- */
-  var scrollCue = document.getElementById("scroll-cue");
-  if (scrollCue) {
-    scrollCue.addEventListener("click", function () {
-      var target = document.getElementById("content-start");
-      if (target) target.scrollIntoView({ behavior: "smooth" });
-    });
-  }
 
   /* ---------- Expandable course price panel (no navigation) ---------- */
   var priceCta = document.getElementById("price-cta");
