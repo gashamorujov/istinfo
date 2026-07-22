@@ -249,330 +249,555 @@
           <p class="section-eyebrow">Rüsum daxil qiymətlər</p>
           <h2 class="section-title">Kurs Adı və Yekun Qiymət</h2>
         </div>
-        <div class="price-grid">
-          <div class="price-card">
-            <div class="price-card-name">Əmniyyətli İdarəetmə haqqında Beynəlxalq Məcəllə</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">16 saat</span>
-              <span class="price-card-days">2 gün</span>
+
+        <!-- Desktop Table View -->
+        <div class="price-table-wrap">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th class="col-num">#</th>
+                <th class="col-name">Kurs Adı</th>
+                <th class="col-hours">Müddət</th>
+                <th class="col-days">Gün</th>
+                <th class="col-price">Qiymət</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-num">1</td>
+                <td class="col-name">Əmniyyətli İdarəetmə haqqında Beynəlxalq Məcəllə</td>
+                <td class="col-hours">16 saat</td>
+                <td class="col-days">2 gün</td>
+                <td class="col-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">2</td>
+                <td class="col-name">Gəminin Mühafizəsi üzrə ümumi hazırlıq və təlimat</td>
+                <td class="col-hours">8 saat</td>
+                <td class="col-days">1 gün</td>
+                <td class="col-price"><span class="price-value">160</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">3</td>
+                <td class="col-name">Gəminin Mühafizəsi üzrə müəyyən edilmiş vəzifələrə malik şəxslərin hazırlığı</td>
+                <td class="col-hours">16 saat</td>
+                <td class="col-days">2 gün</td>
+                <td class="col-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">4</td>
+                <td class="col-name">Gəmi Əmniyyətliyi üzrə Məsul Şəxs</td>
+                <td class="col-hours">18 saat</td>
+                <td class="col-days">3 gün</td>
+                <td class="col-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">5</td>
+                <td class="col-name">Gəmi Mühafizəsi üzrə Məsul Şəxs</td>
+                <td class="col-hours">18 saat</td>
+                <td class="col-days">3 gün</td>
+                <td class="col-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">6</td>
+                <td class="col-name">Bütün dənizçilər üçün təhlükəsizlik üzrə tanışlıq, ilkin hazırlıq və təlimat</td>
+                <td class="col-hours">80 saat</td>
+                <td class="col-days">10 gün</td>
+                <td class="col-price"><span class="price-value">666</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">7</td>
+                <td class="col-name">Kapitan Körpüsü Resurslarının İdarə Olunması</td>
+                <td class="col-hours">42 saat</td>
+                <td class="col-days">6 gün</td>
+                <td class="col-price"><span class="price-value">416</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">8</td>
+                <td class="col-name">Gəminin İdarə Olunması və Manevr Edilməsi</td>
+                <td class="col-hours">40 saat</td>
+                <td class="col-days">5 gün</td>
+                <td class="col-price"><span class="price-value">366</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">9</td>
+                <td class="col-name">Radar, ARPA, körpü komandasının işi və axtarış-xilasetmə (idarəetmə səviyyəsi)</td>
+                <td class="col-hours">40 saat</td>
+                <td class="col-days">5 gün</td>
+                <td class="col-price"><span class="price-value">627</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">10</td>
+                <td class="col-name">Radar müşahidəsi, radar təsviri və ARPA-dan istifadə (istismar səviyyəsi)</td>
+                <td class="col-hours">98 saat</td>
+                <td class="col-days">13 gün</td>
+                <td class="col-price"><span class="price-value">916</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">11</td>
+                <td class="col-name">Elektron Xəritə Displeyi və İnformasiya Sistemlərinin İstismar Qaydaları (ECDIS)</td>
+                <td class="col-hours">40 saat</td>
+                <td class="col-days">5 gün</td>
+                <td class="col-price"><span class="price-value">366</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">12</td>
+                <td class="col-name">Sərnişinlərin, yükün və gəmi gövdəsinin təhlükəsizliyi üzrə hazırlıq</td>
+                <td class="col-hours">18 saat</td>
+                <td class="col-days">3 gün</td>
+                <td class="col-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">13</td>
+                <td class="col-name">Sərnişinlərə bilavasitə xidmət göstərən heyət üzvləri üçün təhlükəsizlik hazırlığı</td>
+                <td class="col-hours">8 saat</td>
+                <td class="col-days">1 gün</td>
+                <td class="col-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">14</td>
+                <td class="col-name">İzdihamın idarə olunması üzrə hazırlıq</td>
+                <td class="col-hours">11 saat</td>
+                <td class="col-days">2 gün</td>
+                <td class="col-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">15</td>
+                <td class="col-name">Böhran zamanı idarəetmə və insan davranışı üzrə hazırlıq</td>
+                <td class="col-hours">16 saat</td>
+                <td class="col-days">2 gün</td>
+                <td class="col-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">16</td>
+                <td class="col-name">Gəmi qaz analizatorları və onların istismarı</td>
+                <td class="col-hours">8 saat</td>
+                <td class="col-days">1 gün</td>
+                <td class="col-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">17</td>
+                <td class="col-name">İnert qaz sistemi</td>
+                <td class="col-hours">16 saat</td>
+                <td class="col-days">2 gün</td>
+                <td class="col-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">18</td>
+                <td class="col-name">Gəmidə ilk tibbi yardım</td>
+                <td class="col-hours">34 saat</td>
+                <td class="col-days">5 gün</td>
+                <td class="col-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">19</td>
+                <td class="col-name">Gəmidə tibbi nəzarət</td>
+                <td class="col-hours">47 saat</td>
+                <td class="col-days">6 gün</td>
+                <td class="col-price"><span class="price-value">366</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">20</td>
+                <td class="col-name">Qlobal Dəniz Fəlakət və Əmniyyətli Rabitə Sisteminin Ümumi Operatoru (GMDSS)</td>
+                <td class="col-hours">110 saat</td>
+                <td class="col-days">14 gün</td>
+                <td class="col-price"><span class="price-value">1066</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">21</td>
+                <td class="col-name">Neft və Kimyəvi maddələr daşıyan tankerlərdə yük əməliyyatlarına dair ilkin hazırlıq və kvalifikasiya</td>
+                <td class="col-hours">48 saat</td>
+                <td class="col-days">6 gün</td>
+                <td class="col-price"><span class="price-value">336</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">22</td>
+                <td class="col-name">Neft tankerlərində yük əməliyyatlarına dair geniş proqram üzrə hazırlıq</td>
+                <td class="col-hours">55 saat</td>
+                <td class="col-days">7 gün</td>
+                <td class="col-price"><span class="price-value">366</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">23</td>
+                <td class="col-name">Kimyəvi maddələr daşıyan tankerlərdə yük əməliyyatlarına dair geniş proqram üzrə hazırlıq</td>
+                <td class="col-hours">60 saat</td>
+                <td class="col-days">8 gün</td>
+                <td class="col-price"><span class="price-value">386</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">24</td>
+                <td class="col-name">Təhlükəli və zərərli yüklərin daşınması</td>
+                <td class="col-hours">34 saat</td>
+                <td class="col-days">5 gün</td>
+                <td class="col-price"><span class="price-value">416</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">25</td>
+                <td class="col-name">Maşın şöbəsinin resurslarının idarə olunması</td>
+                <td class="col-hours">37 saat</td>
+                <td class="col-days">5 gün</td>
+                <td class="col-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">26</td>
+                <td class="col-name">Liderlik və birgə iş fəaliyyəti</td>
+                <td class="col-hours">20 saat</td>
+                <td class="col-days">3 gün</td>
+                <td class="col-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">27</td>
+                <td class="col-name">Yanğınla mübarizə geniş proqram üzrə</td>
+                <td class="col-hours">32 saat</td>
+                <td class="col-days">4 gün</td>
+                <td class="col-price"><span class="price-value">366</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">28</td>
+                <td class="col-name">Sürətli olmayan xilasedici qayıq, növbətçi qayıq və sallar üzrə mütəxəssis</td>
+                <td class="col-hours">32 saat</td>
+                <td class="col-days">4 gün</td>
+                <td class="col-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></td>
+              </tr>
+              <tr>
+                <td class="col-num">29</td>
+                <td class="col-name">Sürətli xilasetmə qayıqları üzrə mütəxəssis</td>
+                <td class="col-hours">20 saat</td>
+                <td class="col-days">3 gün</td>
+                <td class="col-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mobile Card View -->
+        <div class="price-mobile-cards">
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">1</span>
+              <span class="price-mcard-name">Əmniyyətli İdarəetmə haqqında Beynəlxalq Məcəllə</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">251<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">16 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">2 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Gəminin Mühafizəsi üzrə ümumi hazırlıq və təlimat</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">8 saat</span>
-              <span class="price-card-days">1 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">2</span>
+              <span class="price-mcard-name">Gəminin Mühafizəsi üzrə ümumi hazırlıq və təlimat</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">160<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">8 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">1 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">160</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Gəminin Mühafizəsi üzrə müəyyən edilmiş vəzifələrə malik şəxslərin hazırlığı</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">16 saat</span>
-              <span class="price-card-days">2 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">3</span>
+              <span class="price-mcard-name">Gəminin Mühafizəsi üzrə müəyyən edilmiş vəzifələrə malik şəxslərin hazırlığı</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">251<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">16 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">2 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Gəmi Əmniyyətliyi üzrə Məsul Şəxs</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">18 saat</span>
-              <span class="price-card-days">3 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">4</span>
+              <span class="price-mcard-name">Gəmi Əmniyyətliyi üzrə Məsul Şəxs</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">251<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">18 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">3 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Gəmi Mühafizəsi üzrə Məsul Şəxs</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">18 saat</span>
-              <span class="price-card-days">3 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">5</span>
+              <span class="price-mcard-name">Gəmi Mühafizəsi üzrə Məsul Şəxs</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">251<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">18 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">3 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Bütün dənizçilər üçün təhlükəsizlik üzrə tanışlıq, ilkin hazırlıq və təlimat</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">80 saat</span>
-              <span class="price-card-days">10 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">6</span>
+              <span class="price-mcard-name">Bütün dənizçilər üçün təhlükəsizlik üzrə tanışlıq, ilkin hazırlıq və təlimat</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">666<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">80 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">10 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">666</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Kapitan Körpüsü Resurslarının İdarə Olunması</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">42 saat</span>
-              <span class="price-card-days">6 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">7</span>
+              <span class="price-mcard-name">Kapitan Körpüsü Resurslarının İdarə Olunması</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">416<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">42 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">6 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">416</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Gəminin İdarə Olunması və Manevr Edilməsi</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">40 saat</span>
-              <span class="price-card-days">5 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">8</span>
+              <span class="price-mcard-name">Gəminin İdarə Olunması və Manevr Edilməsi</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">366<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">40 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">5 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">366</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Radar, ARPA, körpü komandasının işi və axtarış-xilasetmə (idarəetmə səviyyəsi)</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">40 saat</span>
-              <span class="price-card-days">5 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">9</span>
+              <span class="price-mcard-name">Radar, ARPA, körpü komandasının işi və axtarış-xilasetmə (idarəetmə səviyyəsi)</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">627<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">40 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">5 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">627</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Radar müşahidəsi, radar təsviri və ARPA-dan istifadə (istismar səviyyəsi)</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">98 saat</span>
-              <span class="price-card-days">13 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">10</span>
+              <span class="price-mcard-name">Radar müşahidəsi, radar təsviri və ARPA-dan istifadə (istismar səviyyəsi)</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">916<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">98 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">13 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">916</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Elektron Xəritə Displeyi və İnformasiya Sistemlərinin İstismar Qaydaları (ECDIS)</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">40 saat</span>
-              <span class="price-card-days">5 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">11</span>
+              <span class="price-mcard-name">Elektron Xəritə Displeyi və İnformasiya Sistemlərinin İstismar Qaydaları (ECDIS)</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">366<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">40 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">5 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">366</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Sərnişinlərin, yükün və gəmi gövdəsinin təhlükəsizliyi üzrə hazırlıq</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">18 saat</span>
-              <span class="price-card-days">3 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">12</span>
+              <span class="price-mcard-name">Sərnişinlərin, yükün və gəmi gövdəsinin təhlükəsizliyi üzrə hazırlıq</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">316<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">18 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">3 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Sərnişinlərə bilavasitə xidmət göstərən heyət üzvləri üçün təhlükəsizlik hazırlığı</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">8 saat</span>
-              <span class="price-card-days">1 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">13</span>
+              <span class="price-mcard-name">Sərnişinlərə bilavasitə xidmət göstərən heyət üzvləri üçün təhlükəsizlik hazırlığı</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">251<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">8 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">1 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">İzdihamın idarə olunması üzrə hazırlıq</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">11 saat</span>
-              <span class="price-card-days">2 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">14</span>
+              <span class="price-mcard-name">İzdihamın idarə olunması üzrə hazırlıq</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">251<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">11 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">2 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Böhran zamanı idarəetmə və insan davranışı üzrə hazırlıq</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">16 saat</span>
-              <span class="price-card-days">2 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">15</span>
+              <span class="price-mcard-name">Böhran zamanı idarəetmə və insan davranışı üzrə hazırlıq</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">251<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">16 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">2 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Gəmi qaz analizatorları və onların istismarı</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">8 saat</span>
-              <span class="price-card-days">1 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">16</span>
+              <span class="price-mcard-name">Gəmi qaz analizatorları və onların istismarı</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">251<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">8 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">1 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">İnert qaz sistemi</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">16 saat</span>
-              <span class="price-card-days">2 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">17</span>
+              <span class="price-mcard-name">İnert qaz sistemi</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">251<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">16 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">2 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">251</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Gəmidə ilk tibbi yardım</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">34 saat</span>
-              <span class="price-card-days">5 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">18</span>
+              <span class="price-mcard-name">Gəmidə ilk tibbi yardım</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">316<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">34 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">5 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Gəmidə tibbi nəzarət</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">47 saat</span>
-              <span class="price-card-days">6 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">19</span>
+              <span class="price-mcard-name">Gəmidə tibbi nəzarət</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">366<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">47 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">6 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">366</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Qlobal Dəniz Fəlakət və Əmniyyətli Rabitə Sisteminin Ümumi Operatoru (GMDSS)</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">110 saat</span>
-              <span class="price-card-days">14 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">20</span>
+              <span class="price-mcard-name">Qlobal Dəniz Fəlakət və Əmniyyətli Rabitə Sisteminin Ümumi Operatoru (GMDSS)</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">1066<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">110 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">14 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">1066</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Neft və Kimyəvi maddələr daşıyan tankerlərdə yük əməliyyatlarına dair ilkin hazırlıq və kvalifikasiya</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">48 saat</span>
-              <span class="price-card-days">6 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">21</span>
+              <span class="price-mcard-name">Neft və Kimyəvi maddələr daşıyan tankerlərdə yük əməliyyatlarına dair ilkin hazırlıq və kvalifikasiya</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">336<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">48 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">6 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">336</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Neft tankerlərində yük əməliyyatlarına dair geniş proqram üzrə hazırlıq</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">55 saat</span>
-              <span class="price-card-days">7 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">22</span>
+              <span class="price-mcard-name">Neft tankerlərində yük əməliyyatlarına dair geniş proqram üzrə hazırlıq</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">366<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">55 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">7 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">366</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Kimyəvi maddələr daşıyan tankerlərdə yük əməliyyatlarına dair geniş proqram üzrə hazırlıq</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">60 saat</span>
-              <span class="price-card-days">8 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">23</span>
+              <span class="price-mcard-name">Kimyəvi maddələr daşıyan tankerlərdə yük əməliyyatlarına dair geniş proqram üzrə hazırlıq</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">386<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">60 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">8 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">386</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Təhlükəli və zərərli yüklərin daşınması</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">34 saat</span>
-              <span class="price-card-days">5 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">24</span>
+              <span class="price-mcard-name">Təhlükəli və zərərli yüklərin daşınması</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">416<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">34 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">5 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">416</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Maşın şöbəsinin resurslarının idarə olunması</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">37 saat</span>
-              <span class="price-card-days">5 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">25</span>
+              <span class="price-mcard-name">Maşın şöbəsinin resurslarının idarə olunması</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">316<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">37 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">5 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Liderlik və birgə iş fəaliyyəti</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">20 saat</span>
-              <span class="price-card-days">3 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">26</span>
+              <span class="price-mcard-name">Liderlik və birgə iş fəaliyyəti</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">316<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">20 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">3 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Yanğınla mübarizə geniş proqram üzrə</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">32 saat</span>
-              <span class="price-card-days">4 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">27</span>
+              <span class="price-mcard-name">Yanğınla mübarizə geniş proqram üzrə</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">366<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">32 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">4 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">366</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Sürətli olmayan xilasedici qayıq, növbətçi qayıq və sallar üzrə mütəxəssis</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">32 saat</span>
-              <span class="price-card-days">4 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">28</span>
+              <span class="price-mcard-name">Sürətli olmayan xilasedici qayıq, növbətçi qayıq və sallar üzrə mütəxəssis</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">316<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">32 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">4 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></div>
           </div>
-          <div class="price-card">
-            <div class="price-card-name">Sürətli xilasetmə qayıqları üzrə mütəxəssis</div>
-            <div class="price-card-meta">
-              <span class="price-card-hours">20 saat</span>
-              <span class="price-card-days">3 gün</span>
+          <div class="price-mcard">
+            <div class="price-mcard-head">
+              <span class="price-mcard-num">29</span>
+              <span class="price-mcard-name">Sürətli xilasetmə qayıqları üzrə mütəxəssis</span>
             </div>
-            <div class="price-card-fee">
-              <span class="price-card-fee-label">Rüsum daxil</span>
-              <span class="price-card-fee-value">316<span>AZN</span></span>
+            <div class="price-mcard-details">
+              <div class="price-mcard-detail"><span class="detail-label">Müddət</span><span class="detail-value">20 saat</span></div>
+              <div class="price-mcard-detail"><span class="detail-label">Gün</span><span class="detail-value">3 gün</span></div>
             </div>
+            <div class="price-mcard-price"><span class="price-value">316</span> <span class="price-currency">AZN</span></div>
           </div>
         </div>
+
+      </div>
     </div>
   </div>
 </section>
+
 
 <footer class="footer">
   <strong>IST Services Təlim Mərkəzi</strong> — bu sayt yalnız məlumatlandırma məqsədi daşıyır.
