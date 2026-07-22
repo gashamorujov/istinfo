@@ -862,3 +862,63 @@ button{ font-family: inherit; cursor:pointer; }
   .price-table-wrap{ display:none; }
   .price-mobile-cards{ display:flex; }
 }
+
+/* ==========================================================
+   DOCUMENT ICON COLORS (Distinctive & Readable)
+   ========================================================== */
+.doc-icon-blue{
+  background: linear-gradient(145deg, #1e4b74, #285e8a);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(30,75,116,0.25);
+}
+.doc-icon-green{
+  background: linear-gradient(145deg, #2e7d5b, #3d9e72);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(46,125,91,0.25);
+}
+.doc-icon-purple{
+  background: linear-gradient(145deg, #6b4c9a, #8b6bbf);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(107,76,154,0.25);
+}
+.doc-icon-orange{
+  background: linear-gradient(145deg, #d97706, #f59e0b);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(217,119,6,0.25);
+}
+.doc-icon-teal{
+  background: linear-gradient(145deg, #0d9488, #14b8a6);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(13,148,136,0.25);
+}
+.doc-icon-red{
+  background: linear-gradient(145deg, #dc2626, #ef4444);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(220,38,38,0.25);
+}
+
+/* Hover effects for colored icons */
+.doc-list li:hover .doc-icon-blue{
+  box-shadow: 0 4px 12px rgba(30,75,116,0.35);
+  transform: scale(1.05);
+}
+.doc-list li:hover .doc-icon-green{
+  box-shadow: 0 4px 12px rgba(46,125,91,0.35);
+  transform: scale(1.05);
+}
+.doc-list li:hover .doc-icon-purple{
+  box-shadow: 0 4px 12px rgba(107,76,154,0.35);
+  transform: scale(1.05);
+}
+.doc-list li:hover .doc-icon-orange{
+  box-shadow: 0 4px 12px rgba(217,119,6,0.35);
+  transform: scale(1.05);
+}
+.doc-list li:hover .doc-icon-teal{
+  box-shadow: 0 4px 12px rgba(13,148,136,0.35);
+  transform: scale(1.05);
+}
+.doc-list li:hover .doc-icon-red{
+  box-shadow: 0 4px 12px rgba(220,38,38,0.35);
+  transform: scale(1.05);
+}
