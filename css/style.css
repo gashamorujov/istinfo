@@ -745,7 +745,7 @@ button{ font-family: inherit; cursor:pointer; }
   white-space:nowrap;
 }
 .price-table .price-value{
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size:20px;
   font-weight:700;
   color: var(--navy-800);
@@ -833,7 +833,7 @@ button{ font-family: inherit; cursor:pointer; }
   text-align:right;
 }
 .price-mcard-price .price-value{
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size:24px;
   font-weight:700;
   color: var(--navy-800);
