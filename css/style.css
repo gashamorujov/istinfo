@@ -922,3 +922,35 @@ button{ font-family: inherit; cursor:pointer; }
   box-shadow: 0 4px 12px rgba(220,38,38,0.35);
   transform: scale(1.05);
 }
+
+/* ==========================================================
+   DOCUMENT LIST BUTTON STYLE
+   ========================================================== */
+.doc-list li{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 20px;
+  margin:4px;
+  background: linear-gradient(145deg, var(--navy-800), var(--navy-700));
+  color:#fff;
+  border-radius: var(--radius-l);
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:0.02em;
+  box-shadow: var(--shadow-card);
+  border:1.5px solid rgba(201,168,76,0.2);
+  transition: all var(--transition-slow);
+  cursor:default;
+}
+.doc-list li:hover{
+  transform: translate3d(0, -2px, 0);
+  box-shadow: var(--shadow-raised);
+  border-color: var(--gold);
+}
+.doc-list li svg{
+  width:18px;
+  height:18px;
+  color: var(--gold);
+  flex-shrink:0;
+}
