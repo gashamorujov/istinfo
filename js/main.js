@@ -1,5 +1,6 @@
 // IST Services — Production Scroll Engine
 // Ultra-smooth 60/120fps scroll with GPU acceleration. Zero dependencies.
+// Performance-optimized for butter-smooth scrolling on all devices.
 
 (function () {
   "use strict";
@@ -8,6 +9,7 @@
   var REVEAL_THRESHOLD = 0.08;
   var REVEAL_ROOT_MARGIN = "0px 0px -40px 0px";
   var STAGGER_DELAY = 60;
+  var HERO_ANIMATION_DURATION = 2500; // 2.5 seconds for hero animations
 
   /* ---------- Utility: passive event support ---------- */
   var supportsPassive = false;
@@ -23,6 +25,7 @@
   /* ---------- Scroll state (GPU layer) ---------- */
   var scrollY = 0;
   var ticking = false;
+  var heroAnimated = false;
 
   function onScroll() {
     scrollY = window.pageYOffset || document.documentElement.scrollTop;
@@ -34,10 +37,26 @@
 
   function updateScrollState() {
     ticking = false;
-    // Scroll-based parallax or effects go here (currently minimal to avoid jank)
+    // Pause hero animations after scrolling starts for performance
+    if (!heroAnimated && scrollY > 50) {
+      pauseHeroAnimations();
+      heroAnimated = true;
+    }
   }
 
-  window.addEventListener("scroll", onScroll, passiveOpt);
+  /* ---------- Pause hero animations for performance ---------- */
+  function pauseHeroAnimations() {
+    var heroLogo = document.querySelector('.hero-logo');
+    if (heroLogo) {
+      heroLogo.style.animationPlayState = 'paused';
+      heroLogo.style.willChange = 'auto';
+    }
+    // Remove will-change from hero elements after animation completes
+    var heroElements = document.querySelectorAll('.hero-eyebrow, .hero-title, .hero-rule');
+    for (var i = 0; i < heroElements.length; i++) {
+      heroElements[i].style.willChange = 'auto';
+    }
+  }
 
   /* ---------- IntersectionObserver: reveal on scroll ---------- */
   var revealEls = document.querySelectorAll(".reveal");
@@ -131,6 +150,17 @@
       e.preventDefault();
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+  }, passiveOpt);
+
+  /* ---------- Initialize: pause hero animations after load ---------- */
+  window.addEventListener('load', function() {
+    // Auto-pause hero animations after duration for performance
+    setTimeout(function() {
+      if (!heroAnimated) {
+        pauseHeroAnimations();
+        heroAnimated = true;
+      }
+    }, HERO_ANIMATION_DURATION);
   }, passiveOpt);
 
 })();
