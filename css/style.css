@@ -336,10 +336,16 @@ button{ font-family: inherit; cursor:pointer; }
 }
 .doc-list li:hover{
   transform: translate3d(4px, 0, 0);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-raised);
   border-color: var(--gold);
-  background: var(--surface);
+  background: linear-gradient(145deg, #1a3a5c, #245a7a);
 }
+
+
+
+
+
+
 .doc-list li svg{
   width:22px; height:22px; flex-shrink:0;
   color: var(--navy-700);
