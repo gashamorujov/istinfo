@@ -54,10 +54,10 @@
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after{ box-sizing:border-box; margin:0; padding:0; }
 html{
-  scroll-behavior:smooth;
-  overscroll-behavior:smooth;
-  scroll-padding-top:20px;
-  -webkit-text-size-adjust:100%;
+  /* REMOVED: scroll-behavior: smooth — causes jank on mobile */
+  overscroll-behavior: smooth;
+  scroll-padding-top: 20px;
+  -webkit-text-size-adjust: 100%;
 }
 body{
   font-family: var(--font-body);
@@ -66,7 +66,6 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  /* REMOVED: will-change: transform on body causes GPU layer for entire page = scroll jank */
 }
 img{ max-width:100%; display:block; }
 a{ color:inherit; text-decoration:none; }
@@ -89,8 +88,7 @@ button{ font-family: inherit; cursor:pointer; }
   padding: 40px 24px;
   background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-800) 50%, var(--navy-700) 100%);
   overflow:hidden;
-  /* GPU compositing layer — use contain instead of will-change */
-  contain: layout style;
+  /* REMOVED: contain: layout style — causes layout issues on mobile */
 }
 .hero::before{
   content:'';
@@ -108,12 +106,8 @@ button{ font-family: inherit; cursor:pointer; }
   animation: logoFloat 4s ease-in-out infinite, heroFadeIn 900ms cubic-bezier(.4,0,.2,1) both;
   margin-bottom: 36px;
   position:relative;
-  /* GPU accelerated — only during animation */
   will-change: transform;
 }
-.hero-logo.animate{ will-change: transform; }
-.hero-logo.no-animate{ will-change: auto; animation: none; opacity:1; transform:none; }
-
 @keyframes logoFloat{
   0%,100%{ transform: translate3d(0,0,0); }
   50%{ transform: translate3d(0,-6px,0); }
@@ -164,7 +158,7 @@ button{ font-family: inherit; cursor:pointer; }
 }
 
 /* ==========================================================
-   REVEAL SYSTEM — GPU accelerated, content-visibility optimized
+   REVEAL SYSTEM — GPU accelerated, minimal reflow
    ========================================================== */
 .section{ padding: 84px 0; }
 .section-tight{ padding: 48px 0; }
@@ -194,16 +188,13 @@ button{ font-family: inherit; cursor:pointer; }
   transition: opacity 650ms cubic-bezier(.25,.46,.45,.94), transform 650ms cubic-bezier(.25,.46,.45,.94);
   will-change: opacity, transform;
   backface-visibility: hidden;
-  /* Content visibility for off-screen elements */
-  content-visibility: auto;
-  contain-intrinsic-size: 0 300px;
+  /* REMOVED: content-visibility — causes layout shifts on mobile */
 }
 .reveal.is-visible{
   opacity:1;
   transform: translate3d(0, 0, 0);
   will-change: auto;
   transition-delay: inherit;
-  content-visibility: visible;
 }
 
 /* ==========================================================
@@ -224,7 +215,6 @@ button{ font-family: inherit; cursor:pointer; }
   gap:14px;
   box-shadow: var(--shadow-card);
   transition: transform var(--transition-slow), box-shadow var(--transition-slow), border-color var(--transition-slow);
-  /* GPU acceleration for hover */
   transform: translate3d(0,0,0);
   backface-visibility: hidden;
 }
@@ -315,16 +305,10 @@ button{ font-family: inherit; cursor:pointer; }
   transform: translate3d(4px, 0, 0);
   box-shadow: var(--shadow-card);
   border-color: var(--gold);
-  background: linear-gradient(145deg, #1a3a5c, #245a7a);
-  color: #fff;
-}
-.doc-list li:hover svg{
-  color: var(--gold);
 }
 .doc-list li svg{
   width:18px; height:18px; flex-shrink:0; margin-top:2px;
   color: var(--navy-700);
-  transition: color var(--transition);
 }
 
 /* Timeline */
@@ -619,7 +603,7 @@ button{ font-family: inherit; cursor:pointer; }
   text-align:right;
 }
 .price-table tbody tr{
-  transition: background var(--transition), transform var(--transition);
+  transition: background var(--transition);
   border-bottom:1px solid var(--border);
 }
 .price-table tbody tr:last-child{
@@ -630,7 +614,6 @@ button{ font-family: inherit; cursor:pointer; }
 }
 .price-table tbody tr:hover{
   background: var(--steel-100);
-  transform: translate3d(2px, 0, 0);
 }
 .price-table td{
   padding:14px 20px;
@@ -695,14 +678,7 @@ button{ font-family: inherit; cursor:pointer; }
   border-radius: var(--radius-l);
   padding:18px 20px;
   box-shadow: var(--shadow-card);
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-  transform: translate3d(0,0,0);
-  backface-visibility: hidden;
-}
-.price-mcard:hover{
-  transform: translate3d(0, -2px, 0);
-  box-shadow: var(--shadow-raised);
-  border-color: var(--gold);
+  /* REMOVED: transform/transition for better mobile scroll */
 }
 .price-mcard-head{
   display:flex;
@@ -799,6 +775,47 @@ button{ font-family: inherit; cursor:pointer; }
   /* Hide table, show mobile cards */
   .price-table-wrap{ display:none; }
   .price-mobile-cards{ display:flex; }
+  
+  /* MOBILE OPTIMIZATIONS: Remove hover effects that cause jank */
+  .info-card:hover{
+    transform: none;
+    box-shadow: var(--shadow-card);
+    border-color: var(--border);
+  }
+  .location-card:hover{
+    transform: none;
+    box-shadow: var(--shadow-card);
+    border-color: var(--border);
+  }
+  .doc-list li:hover{
+    transform: none;
+    box-shadow: var(--shadow-card);
+    border-color: var(--border);
+  }
+  .price-card:hover{
+    transform: none;
+    box-shadow: var(--shadow-card);
+    border-color: var(--border);
+  }
+  .exam-btn:hover{
+    transform: none;
+    box-shadow: var(--shadow-raised);
+    border-color: rgba(201,168,76,0.25);
+  }
+  .price-cta:hover{
+    transform: none;
+    box-shadow: var(--shadow-raised), 0 0 0 1px rgba(201,168,76,0.2) inset;
+  }
+  
+  /* Simplify transitions on mobile */
+  .info-card,
+  .location-card,
+  .doc-list li,
+  .price-card,
+  .exam-btn,
+  .price-cta{
+    transition: none;
+  }
 }
 
 /* ==========================================================
@@ -853,30 +870,32 @@ button{ font-family: inherit; cursor:pointer; }
   box-shadow: 0 2px 8px rgba(220,38,38,0.25);
 }
 
-/* Hover effects for colored icons */
-.doc-list li:hover .doc-icon-blue{
-  box-shadow: 0 4px 12px rgba(30,75,116,0.35);
-  transform: scale(1.05);
-}
-.doc-list li:hover .doc-icon-green{
-  box-shadow: 0 4px 12px rgba(46,125,91,0.35);
-  transform: scale(1.05);
-}
-.doc-list li:hover .doc-icon-purple{
-  box-shadow: 0 4px 12px rgba(107,76,154,0.35);
-  transform: scale(1.05);
-}
-.doc-list li:hover .doc-icon-orange{
-  box-shadow: 0 4px 12px rgba(217,119,6,0.35);
-  transform: scale(1.05);
-}
-.doc-list li:hover .doc-icon-teal{
-  box-shadow: 0 4px 12px rgba(13,148,136,0.35);
-  transform: scale(1.05);
-}
-.doc-list li:hover .doc-icon-red{
-  box-shadow: 0 4px 12px rgba(220,38,38,0.35);
-  transform: scale(1.05);
+/* Hover effects for colored icons — disabled on mobile */
+@media (min-width: 721px){
+  .doc-list li:hover .doc-icon-blue{
+    box-shadow: 0 4px 12px rgba(30,75,116,0.35);
+    transform: scale(1.05);
+  }
+  .doc-list li:hover .doc-icon-green{
+    box-shadow: 0 4px 12px rgba(46,125,91,0.35);
+    transform: scale(1.05);
+  }
+  .doc-list li:hover .doc-icon-purple{
+    box-shadow: 0 4px 12px rgba(107,76,154,0.35);
+    transform: scale(1.05);
+  }
+  .doc-list li:hover .doc-icon-orange{
+    box-shadow: 0 4px 12px rgba(217,119,6,0.35);
+    transform: scale(1.05);
+  }
+  .doc-list li:hover .doc-icon-teal{
+    box-shadow: 0 4px 12px rgba(13,148,136,0.35);
+    transform: scale(1.05);
+  }
+  .doc-list li:hover .doc-icon-red{
+    box-shadow: 0 4px 12px rgba(220,38,38,0.35);
+    transform: scale(1.05);
+  }
 }
 
 /* ==========================================================
@@ -896,13 +915,17 @@ button{ font-family: inherit; cursor:pointer; }
   letter-spacing:0.02em;
   box-shadow: var(--shadow-card);
   border:1.5px solid rgba(201,168,76,0.2);
-  transition: all var(--transition-slow);
   cursor:default;
 }
-.doc-list li:hover{
-  transform: translate3d(0, -2px, 0);
-  box-shadow: var(--shadow-raised);
-  border-color: var(--gold);
+@media (min-width: 721px){
+  .doc-list li{
+    transition: all var(--transition-slow);
+  }
+  .doc-list li:hover{
+    transform: translate3d(0, -2px, 0);
+    box-shadow: var(--shadow-raised);
+    border-color: var(--gold);
+  }
 }
 .doc-list li svg{
   width:18px;
