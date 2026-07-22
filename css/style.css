@@ -954,3 +954,18 @@ button{ font-family: inherit; cursor:pointer; }
   color: var(--gold);
   flex-shrink:0;
 }
+
+/* ==========================================================
+   PRICE TABLE - COUNT COLUMN
+   ========================================================== */
+.price-table th.col-count{
+  width:100px;
+  text-align:center;
+}
+.price-table .col-count{
+  text-align:center;
+  font-size:13px;
+  font-weight:600;
+  color: var(--navy-700);
+  white-space:nowrap;
+}
